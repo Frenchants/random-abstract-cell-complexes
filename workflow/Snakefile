@@ -342,6 +342,7 @@ rule download_tntp_dataset:
     run:
         try:
             shell("wget https://raw.githubusercontent.com/bstabler/TransportationNetworks/master/{wildcards.city}/{wildcards.city}_{wildcards.type}.tntp -O {output}")
+            # https://raw.githubusercontent.com/bstabler/TransportationNetworks/master/Anaheim/Anaheim_trips.tntp
         except:
             shell("wget https://raw.githubusercontent.com/bstabler/TransportationNetworks/master/{wildcards.city}/" + wildcards.city.lower() + "_{wildcards.type}.tntp -O {output}")
 

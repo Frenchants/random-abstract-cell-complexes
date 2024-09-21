@@ -5,6 +5,3 @@ __cythonized__
 arxiv
 build
 cython_debug
-resources/
-/figures
-/results
